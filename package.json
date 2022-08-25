@@ -1,0 +1,22 @@
+{
+  "name": "ts-discriminated-unions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dennis O'Keeffe",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.22.0",
+    "tsup": "^6.2.2",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsup src/index.ts --dts --watch --format esm,cjs",
+    "build": "tsup src/index.ts --dts --format esm,cjs --minify",
+    "prebuild": "yarn lint",
+    "lint": "eslint  . --ext .ts"
+  }
+}
